@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventaris Kandang</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Inventaris Kandang</h1>
+        </div>
+    </header>
+    <main class="container">
+        <div class="action-bar">
+            <a href="/add" class="btn btn-primary">Tambah Kandang</a>
+        </div>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Nama Kandang</th>
+                    <th>Kapasitas</th>
+                    <th>Kondisi</th>
+                    <th>Lokasi</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if (kandang.length > 0) { %>
+                    <% kandang.forEach(item => { %>
+                    <tr>
+                        <td><%= item.nama_kandang %></td>
+                        <td><%= item.kapasitas %></td>
+                        <td><%= item.kondisi %></td>
+                        <td><%= item.lokasi %></td>
+                        <td>
+                            <a href="/edit/<%= item.id %>" class="btn btn-warning">Edit</a>
+                            <a href="/delete/<%= item.id %>" class="btn btn-danger" onclick="return confirm('Hapus kandang ini?')">Hapus</a>
+                        </td>
+                    </tr>
+                    <% }) %>
+                <% } else { %>
+                    <tr>
+                        <td colspan="5" class="no-data">Tidak ada data kandang.</td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

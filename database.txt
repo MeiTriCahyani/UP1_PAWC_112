@@ -1,0 +1,11 @@
+CREATE DATABASE inventaris_kandang;
+
+USE inventaris_kandang;
+
+CREATE TABLE kandang (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nama_kandang VARCHAR(100) NOT NULL,
+    kapasitas INT NOT NULL,
+    kondisi VARCHAR(50),
+    lokasi VARCHAR(100)
+);

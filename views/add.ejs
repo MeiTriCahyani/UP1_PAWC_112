@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Kandang</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Tambah Kandang</h1>
+        </div>
+    </header>
+    <main class="container">
+        <form action="/add" method="POST" class="form">
+            <div class="form-group">
+                <label for="nama_kandang">Nama Kandang:</label>
+                <input type="text" id="nama_kandang" name="nama_kandang" placeholder="Masukkan nama kandang" required>
+            </div>
+            <div class="form-group">
+                <label for="kapasitas">Kapasitas:</label>
+                <input type="number" id="kapasitas" name="kapasitas" placeholder="Masukkan kapasitas kandang" required>
+            </div>
+            <div class="form-group">
+                <label for="kondisi">Kondisi:</label>
+                <input type="text" id="kondisi" name="kondisi" placeholder="Masukkan kondisi kandang">
+            </div>
+            <div class="form-group">
+                <label for="lokasi">Lokasi:</label>
+                <input type="text" id="lokasi" name="lokasi" placeholder="Masukkan lokasi kandang">
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Simpan</button>
+                <a href="/" class="btn btn-danger">Batal</a>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
